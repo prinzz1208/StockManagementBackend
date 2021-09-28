@@ -10,8 +10,8 @@ class Token(BaseModel):
 class UserBase(BaseModel):
     id: int
     email: str
-    firstName: str
-    lastName: str
+    first_name: str
+    last_name: str
 
 class UserLogin(BaseModel):
     email: str

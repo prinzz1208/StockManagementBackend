@@ -19,6 +19,7 @@ class Category(Base):
   name = Column(String)
   count = Column(Integer)
   date_in = Column(DateTime)
+  user_id = Column(Integer, ForeignKey('user.id'))
 
 class Product(Base):
   __tablename__ = 'product'

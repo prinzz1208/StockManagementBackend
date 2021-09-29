@@ -1,4 +1,5 @@
 
+from app.categories import categories
 from fastapi import  FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.users import users
@@ -20,6 +21,7 @@ app.add_middleware(
 )
 
 app.include_router(users.router,prefix='/users')
+app.include_router(categories.router,prefix='/users')
 
 Base.metadata.create_all(bind=engine)
 

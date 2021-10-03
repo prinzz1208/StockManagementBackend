@@ -6,7 +6,7 @@ from fastapi.param_functions import Depends
 from . import repository
 router = APIRouter(tags=['categories'])
 
-@router.get('/')
+@router.get('/',response_model=CategoryDTO)
 def get_categories(db: Session = Depends(get_db)):
   return repository.get_categories(db)
 
